@@ -5,7 +5,7 @@
 }
 
 .marketing-site-hero {
-    background: url("/assets/hotmealheroimage.jpg") top right no-repeat;
+    background: url("assets/hotmealheroimage.jpg") top right no-repeat;
     height: 65vh;
     background-size: cover;
     display: -webkit-flex;
@@ -93,7 +93,7 @@
   }
   
   .flip-card-inner-front {
-    background: url("/assets/hotmealfork.jpg") 0 0 no-repeat;
+    background: url("assets/hotmealfork.jpg") 0 0 no-repeat;
     z-index: 2;
     color:#4f4a13;
     display: -webkit-flex;
