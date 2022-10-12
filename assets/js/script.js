@@ -1,3 +1,5 @@
+$(document).foundation();
+
 
 const BREAKFASTURL ="https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast"
 const DESSERTURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"

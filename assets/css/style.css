@@ -27,13 +27,14 @@
     margin: 0 auto;
     padding-left: 5%;
     padding-right: 5%;
-    color: #fff046;
-    text-shadow: 3px 3px #4f4a13;
+    color: black;
+    
     
   }
   
   .marketing-site-hero-content h1 {
     font-size: 32px;
+    font-weight: 800;
       }
   
   .marketing-site-hero-content .button.round {
