@@ -4,6 +4,8 @@ function toggleMenu() {
     console.log("click")
 }
 
+document.getElementById("categories-btn").addEventListener("click", toggleMenu)
+
 const BREAKFASTURL ="https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast"
 const DESSERTURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert"
 const DINNERURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef"
@@ -30,7 +32,6 @@ fetch(LUNCHURL).then(function(data){
     console.log(data)
 })
 
-
 const GINURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Gin"
 const RUMURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Rum"
 const VODKAURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=Vodka"
@@ -56,3 +57,13 @@ fetch(WHISKEYURL).then(function(data){
 }).then(function(data){
     console.log(data)
 })
+
+function drinktoggleMenu() {
+    let categories = $("#drink-categories")
+    categories.toggleClass("active")
+    console.log("click")
+}
+
+document.getElementById("drink-categories-btn").addEventListener("click", drinktoggleMenu)
+
+
