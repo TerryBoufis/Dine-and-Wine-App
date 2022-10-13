@@ -38,6 +38,7 @@ function toggleMenu() {
     console.log("click")
 }
 function toggleBreakfast(){
+    repCards.html("")
     fetch(BREAKFASTURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -74,6 +75,7 @@ function toggleBreakfast(){
     })
 }
 function toggleLunch(){
+    repCards.html("")
     fetch(LUNCHURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -111,6 +113,7 @@ function toggleLunch(){
     
 }
 function toggleDinner(){
+    repCards.html("")
     fetch(DINNERURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -147,6 +150,7 @@ function toggleDinner(){
     })
 }
 function toggleDessert(){
+    repCards.html("")
     fetch(DESSERTURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -183,6 +187,7 @@ function toggleDessert(){
     })
 }
 function toggleVodka(){
+    repCards.html("")
     fetch(VODKAURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -220,6 +225,7 @@ function toggleVodka(){
     })
 }
 function toggleGin(){
+    repCards.html("")
     fetch(GINURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -257,6 +263,7 @@ function toggleGin(){
     })
 }
 function toggleWhiskey(){
+    repCards.html("")
     fetch(WHISKEYURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -294,6 +301,7 @@ function toggleWhiskey(){
     })
 }
 function toggleRum(){
+    repCards.html("")
     fetch(RUMURL).then(function(data){
         return data.json()
     }).then(function(data){
