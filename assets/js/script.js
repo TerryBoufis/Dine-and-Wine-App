@@ -207,7 +207,7 @@ function toggleVodka(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("a", recipeCard).attr("href", recipeLink)
+                $("p", recipeCard).text(recipeInstructions)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -243,7 +243,7 @@ function toggleGin(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("a", recipeCard).attr("href", recipeLink)
+                $("p", recipeCard).text(recipeInstructions)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -279,7 +279,7 @@ function toggleWhiskey(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("a", recipeCard).attr("href", recipeLink)
+                $("p", recipeCard).text(recipeInstructions)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -315,7 +315,7 @@ function toggleRum(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("a", recipeCard).attr("href", recipeLink)
+                $("p", recipeCard).text(recipeInstructions)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
