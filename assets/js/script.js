@@ -1,5 +1,5 @@
 $(document).foundation();
-  
+
 const BREAKFASTURL ="https://www.themealdb.com/api/json/v1/1/filter.php?c=Breakfast";
 const DESSERTURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Dessert";
 const DINNERURL = "https://www.themealdb.com/api/json/v1/1/filter.php?c=Beef";
@@ -20,6 +20,8 @@ var rumLink = $("#rumRecipes");
 var repCards = $(".recipe-cards");
 var templateCard = $("#templateCard");
 var middlePage = $(".marketing-site-hero");
+var savedRecipes = [];
+var savedPage = $("#saved");
 
 
 // javascript for added selectable cards to DOM which will hold recipes
@@ -38,7 +40,6 @@ function toggleMenu() {
     console.log("click")
 }
 function toggleBreakfast(){
-    repCards.html("")
     fetch(BREAKFASTURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -64,6 +65,11 @@ function toggleBreakfast(){
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
                 $("a", recipeCard).attr("href", recipeLink)
+                $(".button", repCards).on("click", function(){
+                    console.log($(this).parent().html()) 
+                    localStorage.setItem("saved recipes", [$(this).parent().html()]) 
+                    localStorage.getItem("saved recipes");
+                })
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -75,7 +81,6 @@ function toggleBreakfast(){
     })
 }
 function toggleLunch(){
-    repCards.html("")
     fetch(LUNCHURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -113,7 +118,6 @@ function toggleLunch(){
     
 }
 function toggleDinner(){
-    repCards.html("")
     fetch(DINNERURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -150,7 +154,6 @@ function toggleDinner(){
     })
 }
 function toggleDessert(){
-    repCards.html("")
     fetch(DESSERTURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -187,7 +190,6 @@ function toggleDessert(){
     })
 }
 function toggleVodka(){
-    repCards.html("")
     fetch(VODKAURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -212,8 +214,7 @@ function toggleVodka(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("p", recipeCard).text(recipeInstructions)
-                $("#recipe-link").remove()
+                $("a", recipeCard).attr("href", recipeLink)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -225,7 +226,6 @@ function toggleVodka(){
     })
 }
 function toggleGin(){
-    repCards.html("")
     fetch(GINURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -250,8 +250,7 @@ function toggleGin(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("p", recipeCard).text(recipeInstructions)
-                $("#recipe-link").remove()
+                $("a", recipeCard).attr("href", recipeLink)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -263,7 +262,6 @@ function toggleGin(){
     })
 }
 function toggleWhiskey(){
-    repCards.html("")
     fetch(WHISKEYURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -288,8 +286,7 @@ function toggleWhiskey(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("p", recipeCard).text(recipeInstructions)
-                $("#recipe-link").remove()
+                $("a", recipeCard).attr("href", recipeLink)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -301,7 +298,6 @@ function toggleWhiskey(){
     })
 }
 function toggleRum(){
-    repCards.html("")
     fetch(RUMURL).then(function(data){
         return data.json()
     }).then(function(data){
@@ -326,8 +322,7 @@ function toggleRum(){
                 var recipeCard = $(templateCard).clone();
                 $("img", recipeCard).attr("src", recipeImgLink)
                 $("h5", recipeCard).text(recipeTitle)
-                $("p", recipeCard).text(recipeInstructions)
-                $("#recipe-link").remove()
+                $("a", recipeCard).attr("href", recipeLink)
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
                 recipeCard.removeClass("hidden")
@@ -339,6 +334,14 @@ function toggleRum(){
     })
 }
 
+function savedPage() {
+    repCards.html("")
+    localStorage.getItem(savedRecipes)
+    savedRecipes.forEach(r => {
+        // put it in the saved div
+    })
+}
+
 breakfastLink.on("click", toggleBreakfast);
 lunchLink.on("click", toggleLunch);
 dinnerLink.on("click", toggleDinner);
@@ -347,3 +350,6 @@ ginLink.on("click", toggleGin);
 vodkaLink.on("click", toggleVodka);
 whiskeyLink.on("click", toggleWhiskey);
 rumLink.on("click", toggleRum);
+
+
+
