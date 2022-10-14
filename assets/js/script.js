@@ -22,12 +22,19 @@ var templateCard = $("#templateCard");
 var middlePage = $(".marketing-site-hero");
 var savedRecipes = [];
 var savedPage = $("#saved");
+var home = $("#homePage");
+
 
 
 // javascript for added selectable cards to DOM which will hold recipes
 $('[data-cardSelectButton]').click(function() {
     $(this).parent('[data-cardSelect]').toggleClass('is-selected');
   });
+
+function toggleHome() {
+    repCards.html("");
+    middlePage.removeClass("hidden")
+}
 
 function drinktoggleMenu() {
     let categories = $("#drink-categories")
@@ -350,6 +357,7 @@ ginLink.on("click", toggleGin);
 vodkaLink.on("click", toggleVodka);
 whiskeyLink.on("click", toggleWhiskey);
 rumLink.on("click", toggleRum);
+home.on("click", toggleHome);
 
 
 

@@ -1,3 +1,9 @@
+/*Home button style rules */
+.menu-text:hover {
+  box-shadow: 0 0.4rem 1.2rem 0;
+}
+
+
 /* nav bar style rules */
 
 .menu button{
