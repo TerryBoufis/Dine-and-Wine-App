@@ -195,7 +195,7 @@ h3 {
 .card-divider{
   display:none;
 }
-.card-section{
+#savedRecipes{
   display:block;
   justify-content: center;
   color:#cfc87b
@@ -203,12 +203,3 @@ h3 {
 .card-section a{
   color:#ba172d;
 }
-
-#savedRecipes{
-  
-}
-
-
-
-
-
