@@ -110,7 +110,7 @@ var savedDiv = $("#savedRecipes");
                 $("#repLink").remove()
                 $(".button", recipeCard).on("click", function(){
                     //console.log($(this).parent().html()) 
-                    savedRecipes.unshift([$(this).parent().html()]);
+                    savedRecipes.unshift($(this).parent().html());
                     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes)) 
                     localStorage.getItem("savedRecipes");
                     console.log(savedRecipes);
@@ -130,7 +130,7 @@ var savedDiv = $("#savedRecipes");
         fetch(BREAKFASTURL).then(function(data){
             return data.json()
         }).then(function(data){
-            // console.log(data)
+            console.log(data)
             printCards(data)
             
         })
@@ -194,8 +194,10 @@ var savedDiv = $("#savedRecipes");
     
     function loadSaved() {
         repCards.html("")
+        savedDiv.html("")
         repCards.addClass("hidden")
         middlePage.addClass("hidden")
+        savedDiv.removeClass("hidden")
         savedRecipes.forEach(r => {
             //console.log($(r))
             savedDiv.append(r)
