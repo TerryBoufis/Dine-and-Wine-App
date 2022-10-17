@@ -51,6 +51,7 @@ var savedDiv = $("#savedRecipes");
     //into a selectable card created on the page
     function printCards(data) {
         repCards.html("")
+        savedDiv.addClass("hidden")
         data.meals.forEach(m => {
             var recipeID = m.idMeal;
             var recipeTitle = m.strMeal;
@@ -73,7 +74,7 @@ var savedDiv = $("#savedRecipes");
                     //console.log($(this).parent().html()) 
                     savedRecipes.unshift($(this).parent().html());
                     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes)) 
-                    console.log(savedRecipes);
+                    //console.log(savedRecipes);
                 })
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
@@ -87,6 +88,7 @@ var savedDiv = $("#savedRecipes");
     
     function printDrinks(data) {
         repCards.html("")
+        savedDiv.addClass("hidden")
         data.drinks.forEach(c => {
             var recipeID = c.idDrink;
             var recipeTitle = c.strDrink;
