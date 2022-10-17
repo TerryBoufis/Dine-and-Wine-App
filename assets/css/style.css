@@ -1,183 +1,111 @@
-/*Home button style rules */
-.menu-text:hover {
-  box-shadow: 0 0.4rem 1.2rem 0;
+a {
+  color:#4f4a13;
 }
 
+/*Header/logo*/
+.menu-text h3 {
+  color: #431f10;
+}
+.menu-text img{
+  width:30%;
+}
+.menu {
+  background-image: linear-gradient(45deg, #cfc87b, #d2a52a);
+  border: none;
+}
 
 /* nav bar style rules */
-
-.menu button{
-    background-color: #fff046;
-    color:#4f4a13;
-    font-weight: bold;
+#meal-categories, #drink-categories, #saved-recipes{
+  text-decoration: underline;
 }
-
-.menu-text {
-  font-size: 24px;
+.dropdown.menu>li.is-active>a {
+  color:#ba172d;
+}
+.dropdown.menu>li.is-dropdown-submenu-parent>a::after {
+  border:none;
+}
+.top-bar{
+  background-color: #4f4a13;
+  padding: 0%;
+  
+}
+.top-bar ul{
+  background-color: #cfc87b;
+}
+body{
+  background-color: #4f4a13;
+}
+.top-bar:active{
+  color:#ba172d;
+}
+h3 {
+  color:#431f10;
+  font-weight: bold;
 }
 
 .menu-text2 {
-  font-size: 16px;
-  color: black;
+  font-size: 17px;
+  color: #6d441d;
   font-weight: bold;
+  transform: translate(0%,250%);
 }
+
+.columns a:hover{
+  color:#ba5517;
+
+}
+
 
 /* style rules for middle of page - food image */
 
 .marketing-site-hero {
     background: url("../hotmealheroimage.jpg") top right no-repeat;
-    height: 65vh;
     background-size: cover;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
+  height: 60vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
   
-  @media screen and (min-width: 40em) {
-    .marketing-site-hero {
-      background-position: center center;
-    }
+@media screen and (min-width: 40em) {
+  .marketing-site-hero {
+    background-position: center center;
   }
+}
+
+.marketing-site-hero-content {
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  color: black;    
+}
   
+.marketing-site-hero-content h1 {
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.marketing-site-hero-content .button.round {
+  border-radius: 5000px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 0;
+}
+  
+@media screen and (min-width: 40em) {
   .marketing-site-hero-content {
-    max-width: 75rem;
-    margin: 0 auto;
-    padding-left: 5%;
-    padding-right: 5%;
-    color: black;
-    
-    
+    padding-left: 50%;
   }
-  
-  .marketing-site-hero-content h1 {
-    font-size: 32px;
-    font-weight: 800;
-      }
-  
-  .marketing-site-hero-content .button.round {
-    border-radius: 5000px;
-    text-transform: uppercase;
-    font-size: 12px;
-    margin-bottom: 0;
-    
-  }
-  
-  @media screen and (min-width: 40em) {
-    .marketing-site-hero-content {
-      padding-left: 50%;
-    }
-  }
+}
 
-/* style rules for flipcard on bottom of page */
-
-.flip-card {
-    -webkit-perspective: 1000;
-            perspective: 1000;
-    border: 0;
-    background: transparent;
-  }
-  
-  .flip-card:hover .flip-card-inner,
-  .flip-card.hover .flip-card-inner {
-    -webkit-transform: rotateY(180deg) translateZ(1px);
-            transform: rotateY(180deg) translateZ(1px);
-  }
-  
-  .flip-card,
-  .flip-card-inner-front,
-  .flip-card-inner-back {
-    width: 100%;
-    height: 20rem;
-  }
-  
-  .flip-card-inner {
-    transition: 0.6s;
-    -webkit-transform-style: preserve-3d;
-            transform-style: preserve-3d;
-    position: relative;
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-  }
-  
-  .flip-card-inner-front,
-  .flip-card-inner-back {
-    -webkit-backface-visibility: hidden;
-            backface-visibility: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .flip-card-inner-front {
-    background: url("../hotmealfork.jpg") 0 0 no-repeat;
-    z-index: 2;
-    color:#4f4a13;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    
-  }
-  
-  .flip-card-inner-front span {
-    width: 100%;
-    text-align: center;
-    background: rgba(254, 254, 254, 0.8);
-    padding: 0.25rem 0;
-    font-size: 1.25rem;
-    font-weight: bold;
-  }
-  
-  .flip-card-inner-back {
-    -webkit-transform: rotateY(180deg) translateZ(1px);
-            transform: rotateY(180deg) translateZ(1px);
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    text-align: center;
-    background: #4f4a13;
-    padding: 1rem;
-    color:#fff046;
-  }
-  
-  .flip-card-inner-back-title {
-    font-weight: bold;
-  }
-  
-  .flip-card-inner-back-text {
-    line-height: 1.3;
-  }
- .flip-card-inner-back button{
-    background-color: #fff046;
-    color:#4f4a13;
- }
-  
-button {
-  background-color: #fff046;
-  color: black;
-  font-size: 18px;
-  padding: 8px 20px;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-} 
 
 /* create a hidden class to hide elements on the page as needed (like when loading in recipe cards) */
 
@@ -186,49 +114,70 @@ button {
 }
 
 /*style rules for the selectable recipe cards*/
+#templateCard{
+  margin-bottom: 2vh;
+  align-items:center;
+  justify-content: center;
+}
 
+.card{
+ border: none;
+ box-shadow: 0 0 10px #cfc87b;;
+}
 .card-select {
   text-align: center;
   transition: all 0.5s ease;
+  background-color: #cfc87b;
+  background-image: linear-gradient(45deg, #d2a52a, #cfc87b);
+}
+
+.card-select a{
+  color:#ba5517;
+}
+
+.card-select a:hover{
+  color:#ba172d;
 }
 
 .card-select .card-divider {
-  background-color: #fefefe;
+  background-color: transparent;
   letter-spacing: 1px;
   font-weight: 500;
   text-transform: uppercase;
-  border: 1px solid #cacaca;
 }
 
 .card-select .button {
   padding: 1rem;
-  background-color: #cacaca;
+  background-color: #69541a;
+  border: none;
+  width: 500px;
+  border-radius: 10%;
 }
 
 .card-select .button:after {
-  content: 'Select';
+  content: 'Save Recipe';
 }
 
 .card-select .button:hover {
-  background-color: #1779ba;
+  background-color: #ba172d;
 }
 
 .card-select .button:focus {
-  background-color: #1779ba;
+  background-color: #ba172d;
 }
 
 .card-select.is-selected {
-  border: 1px solid #1779ba;
+  border: 1px solid #ba5517;
   box-shadow: 0 0 10px #e6e6e6;
   transition: all 0.5s ease;
 }
 
 .card-select.is-selected .button {
-  background-color: #1779ba;
+  background-color: #ba172d;
 }
 
 .card-select.is-selected .button:after {
-  content: 'Selected';
+  content: 'Saved Recipe';
 }
 
 .recipe-cards {
@@ -240,3 +189,11 @@ button {
   width: 300px;
   height: 300px;
 }
+
+
+
+
+
+
+
+
