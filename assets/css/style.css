@@ -47,7 +47,6 @@ h3 {
   font-size: 17px;
   color: #6d441d;
   font-weight: bold;
-  transform: translate(0%,250%);
 }
 
 .columns a:hover{
@@ -191,7 +190,23 @@ h3 {
 }
 
 
+/*Saved Recipes Styling*/
 
+.card-divider{
+  display:none;
+}
+.card-section{
+  display:block;
+  justify-content: center;
+  color:#cfc87b
+}
+.card-section a{
+  color:#ba172d;
+}
+
+#savedRecipes{
+  
+}
 
 
 
