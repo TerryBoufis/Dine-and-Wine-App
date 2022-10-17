@@ -51,6 +51,7 @@ var savedDiv = $("#savedRecipes");
     //into a selectable card created on the page
     function printCards(data) {
         repCards.html("")
+        savedDiv.addClass("hidden")
         data.meals.forEach(m => {
             var recipeID = m.idMeal;
             var recipeTitle = m.strMeal;
@@ -73,7 +74,7 @@ var savedDiv = $("#savedRecipes");
                     //console.log($(this).parent().html()) 
                     savedRecipes.unshift($(this).parent().html());
                     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes)) 
-                    console.log(savedRecipes);
+                    //console.log(savedRecipes);
                 })
                 recipeCard.appendTo(repCards)
                 repCards.removeClass("hidden")
@@ -87,6 +88,7 @@ var savedDiv = $("#savedRecipes");
     
     function printDrinks(data) {
         repCards.html("")
+        savedDiv.addClass("hidden")
         data.drinks.forEach(c => {
             var recipeID = c.idDrink;
             var recipeTitle = c.strDrink;
@@ -108,7 +110,7 @@ var savedDiv = $("#savedRecipes");
                 $("#repLink").remove()
                 $(".button", recipeCard).on("click", function(){
                     //console.log($(this).parent().html()) 
-                    savedRecipes.unshift([$(this).parent().html()]);
+                    savedRecipes.unshift($(this).parent().html());
                     localStorage.setItem("savedRecipes", JSON.stringify(savedRecipes)) 
                     localStorage.getItem("savedRecipes");
                     console.log(savedRecipes);
@@ -128,7 +130,7 @@ var savedDiv = $("#savedRecipes");
         fetch(BREAKFASTURL).then(function(data){
             return data.json()
         }).then(function(data){
-            // console.log(data)
+            console.log(data)
             printCards(data)
             
         })
@@ -192,8 +194,10 @@ var savedDiv = $("#savedRecipes");
     
     function loadSaved() {
         repCards.html("")
+        savedDiv.html("")
         repCards.addClass("hidden")
         middlePage.addClass("hidden")
+        savedDiv.removeClass("hidden")
         savedRecipes.forEach(r => {
             //console.log($(r))
             savedDiv.append(r)
