@@ -5,9 +5,14 @@ a {
 /*Header/logo*/
 .menu-text h3 {
   color: #431f10;
+  margin: 0;
+  
 }
 .menu-text img{
   width:30%;
+}
+.menu .menu-text{
+  padding:0;
 }
 .menu {
   background-image: linear-gradient(45deg, #cfc87b, #d2a52a);
@@ -47,7 +52,6 @@ h3 {
   font-size: 17px;
   color: #6d441d;
   font-weight: bold;
-  transform: translate(0%,250%);
 }
 
 .columns a:hover{
@@ -138,6 +142,9 @@ h3 {
 .card-select a:hover{
   color:#ba172d;
 }
+.card-select a:focus{
+  color:#ba172d;
+}
 
 .card-select .card-divider {
   background-color: transparent;
@@ -191,9 +198,14 @@ h3 {
 }
 
 
+/*Saved Recipes Styling*/
 
-
-
-
-
-
+.card-divider{
+  display:none;
+}
+#savedRecipes{
+  color:#cfc87b
+}
+.card-section a{
+  color:#ba172d;
+}
