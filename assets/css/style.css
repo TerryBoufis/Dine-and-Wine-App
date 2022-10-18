@@ -5,9 +5,14 @@ a {
 /*Header/logo*/
 .menu-text h3 {
   color: #431f10;
+  margin: 0;
+  
 }
 .menu-text img{
   width:30%;
+}
+.menu .menu-text{
+  padding:0;
 }
 .menu {
   background-image: linear-gradient(45deg, #cfc87b, #d2a52a);
@@ -137,6 +142,9 @@ h3 {
 .card-select a:hover{
   color:#ba172d;
 }
+.card-select a:focus{
+  color:#ba172d;
+}
 
 .card-select .card-divider {
   background-color: transparent;
@@ -196,8 +204,6 @@ h3 {
   display:none;
 }
 #savedRecipes{
-  display:block;
-  justify-content: center;
   color:#cfc87b
 }
 .card-section a{
