@@ -2,7 +2,7 @@
 
 ## Description
 
-
+An application which generates a diverse selection of recipes for each meal of the day, as well as cocktails for several types of alcohol. The user can save recipes they like and come back to them later for reference.
 
 ## Preview 
 
@@ -14,7 +14,7 @@ None required
 
 ## Usage
 
-
+For individual meal planning. 
 
 ## License
 
