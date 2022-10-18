@@ -33,6 +33,7 @@ var savedDiv = $("#savedRecipes");
     
     function toggleHome() {
         repCards.html("");
+        savedDiv.html("");
         middlePage.removeClass("hidden")
     }
     
@@ -51,6 +52,7 @@ var savedDiv = $("#savedRecipes");
     //into a selectable card created on the page
     function printCards(data) {
         repCards.html("")
+        savedDiv.html("")
         savedDiv.addClass("hidden")
         data.meals.forEach(m => {
             var recipeID = m.idMeal;
@@ -88,6 +90,7 @@ var savedDiv = $("#savedRecipes");
     
     function printDrinks(data) {
         repCards.html("")
+        savedDiv.html("")
         savedDiv.addClass("hidden")
         data.drinks.forEach(c => {
             var recipeID = c.idDrink;
